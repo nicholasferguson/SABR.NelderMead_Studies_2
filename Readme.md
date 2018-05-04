@@ -26,7 +26,7 @@
 		+ EDate for 2007 is available via Analysis Tool Pack Add for Excel 2007,
 	+ Decimal accuracy between Excel and C++ is off...not sure why.
 	+ This app does not yet promise to always close excel s/h.  This has to be reviewed.
-		+ If run of this app is interrupted, an excel s/h will not correctly closed.  Have to add some code.
+		+ If run of this app is interrupted, an excel s/h will not be cleaned up.  Have to add some code.
 	
 # To run: 
 + Swaption_Volatility_SABR_Calibration.xls MUST BE CLOSED.
