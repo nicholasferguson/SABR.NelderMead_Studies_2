@@ -20,7 +20,7 @@
 # Issues
 	+ This code needs some cleanup. It was meant as a quick study.
 	+ Excel s/h was tested with Excel 2007 on Windows 10 Business
-	+ Two addins are used
+	+ Excel s/h has two addins:
 		+ Solver
 			+ If problems, google, how delete this Addin and then reinstall.
 		+ EDate for 2007 is available via Analysis Tool Pack Add for Excel 2007,
