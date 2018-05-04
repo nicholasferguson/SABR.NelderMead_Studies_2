@@ -1,7 +1,8 @@
 
 # SABR. This study illustrates how SABR, alpha beta rho nu, is solved using NelderMead 
 
-+ This C++ app does not require any external librairies.  It is built with Visual C++ 2017 Community Edition.
++ This C++ app does not require any external libraries.  
++ It is built with Visual C++ 2017 Community Edition. x64.  Only debug mode has been tested.
 
 + It has two SABR related computations in function: SABR_BlackVol_InitialAlpha
 	+ 'Obloj2008'  Method in Obloj 2008
