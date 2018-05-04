@@ -46,11 +46,11 @@ $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
 				 
 + =================Excel Input Fixed Rates ===========
 
-| Fixed Rates
-| -----------
-| 0.035257595 
-| 0.041738169
-| 0.042418148
+                 | Fixed Rates
+                 | -----------
+                 | 0.035257595 
+                 | 0.041738169
+                 | 0.042418148
 
 + ================= Excel Input MktVol ( SABR Implied Alpha Worksheet) ===========
 
