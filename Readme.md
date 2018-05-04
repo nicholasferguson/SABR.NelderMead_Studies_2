@@ -13,6 +13,7 @@
 # Original VB code by Changwei Xiong. 
 + http://www.cs.utah.edu/~cxiong/
 
++ This C++ console app, ported his VB code over to C++.
 + His Excel spreadshet is titled "Swaption_Volatility_SABR_Calibration.xls" See his worksheet titled "Copyright and Disclaimer"  
 + This C++ console app reads in data from his spreadsheet.  Then duplicates computations found on his worksheet 'SABR(Implied Alpha)'
 + This C++ console app has output that can be compared to Changwei Xiong's spreadsheet output on worksheet 'SABR(Implied Alpha)'
