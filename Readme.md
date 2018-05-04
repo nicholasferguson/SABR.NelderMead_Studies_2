@@ -33,6 +33,9 @@
 + Swaption_Volatility_SABR_Calibration.xls MUST BE CLOSED.
 + Verify that this line is in 'Command Arguments" passed to app via VS properties, in debug mode.
 $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
++ If that has problems then uncomment line in main, and type in your path to that s/h.
+   +  	//wchar_t* XLSPATH = L"H:\\github\\workdir.2018\\SABR.NelderMead_Studies_2\\Swaption_Volatility_SABR_Calibration.xls";
+
 	
 	
 ======
