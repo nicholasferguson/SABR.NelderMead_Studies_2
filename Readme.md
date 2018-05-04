@@ -1,33 +1,34 @@
 
 # SABR. This study illustrates how SABR, alpha beta rho nu, is solved using NelderMead 
 
-+This C++ app does not require any external librairies.  It is built with Visual C++ 2017 Community Edition.
++ This C++ app does not require any external librairies.  It is built with Visual C++ 2017 Community Edition.
 
-+It has two SABR related computations in function: SABR_BlackVol_InitialAlpha
-	+'Obloj2008'  Method in Obloj 2008
-	+'hagan2002'  Original Hagan's method in Hagan et. al. 2002
++ It has two SABR related computations in function: SABR_BlackVol_InitialAlpha
+	+ 'Obloj2008'  Method in Obloj 2008
+	+ 'hagan2002'  Original Hagan's method in Hagan et. al. 2002
 + This SABR model does an initial fit of beta rho nu using method of a local calibration algorithm.  
 
-# Original VB code by Changwei Xiong. http://www.cs.utah.edu/~cxiong/
+# Original VB code by Changwei Xiong. 
++ http://www.cs.utah.edu/~cxiong/
 
-+His Excel spreadshet is titled "Swaption_Volatility_SABR_Calibration.xls" See his worksheet titled "Copyright and Disclaimer"  
-+This C++ console app reads in data from his spreadsheet.  Then duplicates computations found on his worksheet 'SABR(Implied Alpha)'
-+This C++ console app has output that can be compared to Changwei Xiong's spreadsheet output on worksheet 'SABR(Implied Alpha)'
++ His Excel spreadshet is titled "Swaption_Volatility_SABR_Calibration.xls" See his worksheet titled "Copyright and Disclaimer"  
++ This C++ console app reads in data from his spreadsheet.  Then duplicates computations found on his worksheet 'SABR(Implied Alpha)'
++ This C++ console app has output that can be compared to Changwei Xiong's spreadsheet output on worksheet 'SABR(Implied Alpha)'
 
 # Issues
-	+This code needs some cleanup. It was meant as a quick study.
-	+Excel s/h was tested with Excel 2007 on Windows 10 Business
-	+Two addins are used
+	+ This code needs some cleanup. It was meant as a quick study.
+	+ Excel s/h was tested with Excel 2007 on Windows 10 Business
+	+ Two addins are used
 		+ Solver
 			+ If problems, google, how delete this Addin and then reinstall.
 		+ EDate for 2007 is available via Analysis Tool Pack Add for Excel 2007,
-	+Decimal accuracy between Excel and C++ is off...not sure why.
-	+This app does not yet promise to always close excel s/h.  This has to be reviewed.
+	+ Decimal accuracy between Excel and C++ is off...not sure why.
+	+ This app does not yet promise to always close excel s/h.  This has to be reviewed.
 		+ If run of this app is interrupted, an excel s/h will not correctly closed.  Have to add some code.
 	
 # To run: 
-Swaption_Volatility_SABR_Calibration.xls MUST BE CLOSED.
-Verify that this line is in 'Command Arguments" passed to app via VS properties, in debug mode.
++ Swaption_Volatility_SABR_Calibration.xls MUST BE CLOSED.
++ Verify that this line is in 'Command Arguments" passed to app via VS properties, in debug mode.
 $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
 	
 	
