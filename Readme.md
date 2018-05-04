@@ -34,7 +34,7 @@ $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
 	
 	
 ======
-# Below is a partial out put from this C++ application
+# Below is a partial output from this C++ application
 =======
 + Fetching data from spreadsheet.... I added some formatting in Readme.md
 
