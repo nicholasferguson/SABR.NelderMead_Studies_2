@@ -35,6 +35,8 @@
 $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
 + If that has problems then uncomment line in main, and type in your path to that s/h.
    +  	//wchar_t* XLSPATH = L"H:\\github\\workdir.2018\\SABR.NelderMead_Studies_2\\Swaption_Volatility_SABR_Calibration.xls";
+   +  and comment out this line:
+   +  wchar_t* XLSPATH = (wchar_t*)argv[1];
 
 	
 	
