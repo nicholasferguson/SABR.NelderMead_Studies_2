@@ -40,8 +40,8 @@ $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
 
 + =================Excel Input Local Calibration for NelderMead: Beta, Rho Nu ===========
 
-				 |  Beta				 |  Rho						| Nu
-				 |---------------------- | ------------------------ | ---------------------
+                 |  Beta				 |  Rho						| Nu
+                 |---------------------- | ------------------------ | ---------------------
                  |  0.56000000000000005  |   -0.01000000000000000   |   0.34599999999999997
 				 
 + =================Excel Input Fixed Rates ===========
