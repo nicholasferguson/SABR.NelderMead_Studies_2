@@ -38,13 +38,13 @@ $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
 =======
 + Fetching data from spreadsheet....
 
-# =================Excel Input Local Calibration for NelderMead: Beta, Rho Nu ===========
++ =================Excel Input Local Calibration for NelderMead: Beta, Rho Nu ===========
                  |  0.56000000000000005  |   -0.01000000000000000   |   0.34599999999999997
-# =================Excel Input Fixed Rates ===========
++ =================Excel Input Fixed Rates ===========
 | 0.035257595
 | 0.041738169
 | 0.042418148
-# ================= Excel Input MktVol ===========
++ ================= Excel Input MktVol ===========
                   | 0.27410000000000001 |  0.21270000000000000    
                   | 0.20929999999999999 |  0.16990000000000000
                   | 0.18420000000000000 |  0.14940000000000001
