@@ -8,6 +8,7 @@
 	+ 'Obloj2008'  Method in Obloj 2008
 	+ 'hagan2002'  Original Hagan's method in Hagan et. al. 2002
 + This SABR model does an initial fit of beta rho nu using method of a local calibration algorithm.  
++ It has a '/doc' subdirectory with related pdfs embedded in spreadsheet, plus a few more.
 
 # Original VB code by Changwei Xiong. 
 + http://www.cs.utah.edu/~cxiong/
