@@ -83,15 +83,16 @@ $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
                   | 0.20899999999999999 |  0.20499999999999999  
                   | 0.20000000000000001 |  0.19600000000000001 
 				  
-================= SABR Model Output: NelderMead Iterations to Converge ========== =
+================= SABR Model Output: NelderMead Iterations to Converge ===========
 =================       for each row of SABR parameters  ===========
 
-| Loops per row for NelderMean to converge
-| -----------------------------------------
-| Row 0 Count 93
-| Row 1 Count 115
-| Row 2 Count 104
-| Row 3 Count 124
+                  | Loops per row for NelderMean to converge
+                  | -----------------------------------------
+                  | Row 0 Count 93
+                  | Row 1 Count 115
+                  | Row 2 Count 104
+                  | Row 3 Count 124
+				  
 ================= SABR Model Output: Beta Rho Nu (via NelderMead's RunFunction/MyFunction) ===========
 
                   |  beta                |  rho                   |	Nu		
@@ -103,12 +104,13 @@ $(ProjectDir)Swaption_Volatility_SABR_Calibration.xls
 				  
 ================= SABR Model Output: Alpha (via NelderMead's RunFunction/MyFunction)  ===========
 
-| alpha       | 
-| ----------- | 
-| 0.041294239 | 
-| 0.035201727 | 
-| 0.033891166 | 
-| 0.035117295 |  
+                  | alpha       | 
+                  | ----------- | 
+                  | 0.041294239 | 
+                  | 0.035201727 | 
+                  | 0.033891166 | 
+                  | 0.035117295 |  
+				  
 ================= SABR Model Output: SABR volatilities  (via NelderMead's RunFunction/MyFunction)  ===========
 
                   |  -200               |  -100					
