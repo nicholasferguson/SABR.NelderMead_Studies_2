@@ -278,13 +278,29 @@ int main(int argc, char * argv[])
 		double rem = MyFunction(nmopt.SolveMinimum(initguess), true);
 
 	}
-	
+	// iterate through rows to calculate Black-76 Put Call and Parity
+	double r = .02;
+	for (int i = 0; i < rows; ++i) {
+		for (int j = 0; j < cols; ++j)
+		{
+
+			blackP[i][j] = Black76(cm_FixedRates(i, j), cm_StrikeRates_K(i, j), cm_Expiry(i, 0), cm_ModelVol(i, j), r, "Put");
+			blackC[i][j] = Black76(cm_FixedRates(i, j), cm_StrikeRates_K(i, j), cm_Expiry(i, 0), cm_ModelVol(i, j), r, "Call");
+			parity[i][j] = diffInPutCallParity(blackC(i, j), blackP(i, j), cm_FixedRates(i, j), cm_StrikeRates_K(i, j), r, cm_Expiry(i, 0));
+		}
+	}
 	std::cout << "================= SABR Model Output: Beta Rho Nu (via NelderMead's RunFunction/MyFunction) ===========" << std::endl;
 	print_2Dmatrix(cm_BetRhoNu);
 	std::cout << "================= SABR Model Output: Alpha (via NelderMead's RunFunction/MyFunction)  ===========" << std::endl;
 	print_vector(Alphas);
 	std::cout << "================= SABR Model Output: SABR volatilities  (via NelderMead's RunFunction/MyFunction)  ===========" << std::endl;
 	print_2Dmatrix(cm_ModelVol);
+	std::cout << "================= Black 76 Puts ===========" << std::endl;
+	print_2Dmatrix(blackP);
+	std::cout << "================= Black 76 Calls ===========" << std::endl;
+	print_2Dmatrix(blackC);
+	std::cout << "================= Black 76 Diffs in Put Call Parity ===========" << std::endl;
+	print_2Dmatrix(parity);
 	return 0;
 }
 
