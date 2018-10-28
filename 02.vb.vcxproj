@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="02.vb.h" />
+    <ClInclude Include="Black76.h" />
     <ClInclude Include="cmat.h" />
     <ClInclude Include="MMappedArray.hpp" />
     <ClInclude Include="MSABR.h" />
@@ -163,9 +164,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="02.vb.cpp" />
+    <ClCompile Include="Black76.cpp" />
     <ClCompile Include="CConstraints.h" />
     <ClCompile Include="CNealderMead.h" />
     <ClCompile Include="MSABR.cpp" />
+    <ClCompile Include="normalDist.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="xlsread.cpp" />
   </ItemGroup>

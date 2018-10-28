@@ -10,6 +10,7 @@
 #include "cmat.h"
 #include "xlsread.h"
 #include "ofmt.h"
+#include "Black76.h"
 //==============================================================================
 // Containers to hold excel data in C++ app.
 //==============================================================================
@@ -203,8 +204,8 @@ double  MyFunction(std::vector<double>& py, bool Converged ) // default Converge
 
 int main(int argc, char * argv[])
 {
-	wchar_t* XLSPATH = (wchar_t*)argv[1];
-	//wchar_t* XLSPATH = L"H:\\github\\workdir.2018\\SABR.NelderMead_Studies_2\\Swaption_Volatility_SABR_Calibration.xls";
+	//wchar_t* XLSPATH = (wchar_t*)argv[1];
+	wchar_t* XLSPATH = L"H:\\github\\workdir.2018\\SABR.NelderMead_Studies_2\\Swaption_Volatility_SABR_Calibration.xls";
 	std::cout << "Fetching data from spreadsheet.  Tenor and Exp are on s/h" << std::endl;
 	// Fetch data from spreadsheets
 	xlsread(XLSPATH, L"Data", L"T13:T32", cm_FixedRates);
@@ -245,6 +246,10 @@ int main(int argc, char * argv[])
 	cm_ModelVol.newsize(rows, cols);
 	Alphas.resize(rows);
 
+	Matrix<double> blackP; blackP.newsize(rows, cols);
+	Matrix<double> blackC; blackC.newsize(rows, cols);
+	Matrix<double> parity; parity.newsize(rows, cols);
+
 
 	// Add Constraints.. how used?
 	CNelderMead nmopt;
@@ -273,13 +278,29 @@ int main(int argc, char * argv[])
 		double rem = MyFunction(nmopt.SolveMinimum(initguess), true);
 
 	}
-	
+	// iterate through rows to calculate Black-76 Put Call and Parity
+	double r = .02;
+	for (int i = 0; i < rows; ++i) {
+		for (int j = 0; j < cols; ++j)
+		{
+
+			blackP[i][j] = Black76(cm_FixedRates(i, j), cm_MktVol(i, j), cm_Expiry(i, 0), cm_ModelVol(i, j), r, "Put");
+			blackC[i][j] = Black76(cm_FixedRates(i, j), cm_MktVol(i, j), cm_Expiry(i, 0), cm_ModelVol(i, j), r, "Call");
+			parity[i][j] = diffInPutCallParity(blackC(i, j), blackP(i, j), cm_FixedRates(i, j), cm_MktVol(i, j), r, cm_Expiry(i, 0));
+		}
+	}
 	std::cout << "================= SABR Model Output: Beta Rho Nu (via NelderMead's RunFunction/MyFunction) ===========" << std::endl;
 	print_2Dmatrix(cm_BetRhoNu);
 	std::cout << "================= SABR Model Output: Alpha (via NelderMead's RunFunction/MyFunction)  ===========" << std::endl;
 	print_vector(Alphas);
 	std::cout << "================= SABR Model Output: SABR volatilities  (via NelderMead's RunFunction/MyFunction)  ===========" << std::endl;
 	print_2Dmatrix(cm_ModelVol);
+	std::cout << "================= Black 76 Puts ===========" << std::endl;
+	print_2Dmatrix(blackP);
+	std::cout << "================= Black 76 Calls ===========" << std::endl;
+	print_2Dmatrix(blackC);
+	std::cout << "================= Black 76 Diffs in Put Call Parity ===========" << std::endl;
+	print_2Dmatrix(parity);
     return 0;
 }
 
