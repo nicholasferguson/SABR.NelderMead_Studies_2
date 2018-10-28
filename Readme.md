@@ -1,5 +1,6 @@
 
 # SABR. This study illustrates how SABR, alpha beta rho nu, is solved using NelderMead 
+# This was a test case to work with SABR and NelderMead.
 
 + This C++ app does not require any external libraries.  It does read in data from an excel s/h.
 + It is built with Visual C++ 2017 Community Edition. x64.  Only debug mode has been tested.
