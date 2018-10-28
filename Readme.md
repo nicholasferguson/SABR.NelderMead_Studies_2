@@ -23,6 +23,8 @@
 # Issues
 	+ This code needs some cleanup. It was meant as a quick study.
 	+ Excel s/h was tested with Excel 2007 on Windows 10 Business
+	+ Excel s/h do not close if app is interrupted during debug.
+	+ Excel s/h is not that stable, with this xlsread....
 	+ Excel s/h has two addins:
 		+ Solver
 			+ If problems, google, how delete this Addin and then reinstall.
